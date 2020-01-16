@@ -1,0 +1,15 @@
+{
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-wildrydes-dev-113915-authRole",
+            "UnauthRoleArn": "arn:aws:iam::645580854460:role/amplify-wildrydes-dev-113915-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::645580854460:role/amplify-wildrydes-dev-113915-authRole",
+            "Region": "us-west-2",
+            "DeploymentBucketName": "amplify-wildrydes-dev-113915-deployment",
+            "UnauthRoleName": "amplify-wildrydes-dev-113915-unauthRole",
+            "StackName": "amplify-wildrydes-dev-113915",
+            "StackId": "arn:aws:cloudformation:us-west-2:645580854460:stack/amplify-wildrydes-dev-113915/fd6047a0-3886-11ea-a445-06b6ad3a0d7e",
+            "AmplifyAppId": "d1z4ttz4a4qk97"
+        }
+    }
+}
