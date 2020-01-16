@@ -1,0 +1,8 @@
+{
+  "name": "wildrydes",
+  "version": "1.0.0"
+  "scripts": {
+    "build": "echo I am lazy",
+    "start": "echo very lazy"
+  }
+}
