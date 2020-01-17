@@ -20,7 +20,7 @@ WildRydes.map = WildRydes.map || {};
     function requestUnicorn(pickupLocation) {
         $.ajax({
             method: 'POST',
-            url: _config.api.invokeUrl + '/ride',
+            url: awsmobile.aws_cloud_logic_custom[0].endpoint + '/ride',
             headers: {
                 Authorization: authToken
             },
@@ -67,7 +67,7 @@ WildRydes.map = WildRydes.map || {};
             }
         });
 
-        if (!awsmobile.api) {
+        if (!awsmobile.aws_cloud_logic_custom) {
             $('#noApiMessage').show();
         }
     });
