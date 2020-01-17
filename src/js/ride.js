@@ -1,6 +1,8 @@
 /*global WildRydes _config*/
 
-var WildRydes = window.WildRydes || {};
+import WildRydes from "./cognito-auth.js";
+import awsmobile from "../aws-exports.js";
+
 WildRydes.map = WildRydes.map || {};
 
 (function rideScopeWrapper($) {
@@ -65,7 +67,7 @@ WildRydes.map = WildRydes.map || {};
             }
         });
 
-        if (!_config.api.invokeUrl) {
+        if (!awsmobile.api) {
             $('#noApiMessage').show();
         }
     });

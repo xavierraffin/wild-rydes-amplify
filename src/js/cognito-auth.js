@@ -173,3 +173,5 @@ var WildRydes = window.WildRydes || {};
         );
     }
 }(jQuery));
+
+export default WildRydes;
