@@ -1,20 +1,22 @@
 /*global WildRydes _config AmazonCognitoIdentity AWSCognito*/
 
+import awsmobile from "../aws-exports.js";
+
 var WildRydes = window.WildRydes || {};
 
 (function scopeWrapper($) {
     var signinUrl = '/signin.html';
 
     var poolData = {
-        UserPoolId: _config.cognito.userPoolId,
-        ClientId: _config.cognito.userPoolClientId
+        UserPoolId: awsmobile.aws_user_pools_id,
+        ClientId: awsmobile.aws_user_pools_web_client_id
     };
 
     var userPool;
 
-    if (!(_config.cognito.userPoolId &&
-          _config.cognito.userPoolClientId &&
-          _config.cognito.region)) {
+    if (!(awsmobile.aws_user_pools_id &&
+          awsmobile.aws_user_pools_web_client_id &&
+          awsmobile.aws_cognito_region)) {
         $('#noCognitoMessage').show();
         return;
     }
@@ -22,7 +24,7 @@ var WildRydes = window.WildRydes || {};
     userPool = new AmazonCognitoIdentity.CognitoUserPool(poolData);
 
     if (typeof AWSCognito !== 'undefined') {
-        AWSCognito.config.region = _config.cognito.region;
+        AWSCognito.config.region = awsmobile.aws_cognito_region;
     }
 
     WildRydes.signOut = function signOut() {
